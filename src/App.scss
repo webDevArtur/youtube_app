@@ -1,0 +1,94 @@
+.appHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  padding: 8px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.98;
+}
+
+.searchBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 74px;
+  left: 0;
+  width: 64px;
+  height: 100vh;
+  padding: 0 4px;
+  z-index: 10;
+}
+
+  .navLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .navLink {
+      color: #030303;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 0 14px;
+      width: 64px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        background-color: #f2f2f2;
+      }
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+.mainContent {
+  margin-left: 100px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .appHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .searchBar {
+    margin: 15px 10px 0;
+    justify-content: start;
+  }
+
+  .sidebar {
+    top: 100px;
+  }
+
+  .mainContent {
+    margin-left: 64px;
+    flex: 1;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+}
